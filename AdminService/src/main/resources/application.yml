@@ -1,0 +1,35 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: Admin-Service
+  :globalcors:
+              corsConfigurations:'[/**]':
+                allowedOrigins: "http://localhost:3000"
+                allowedHeaders: "*"
+                allowedMethods: "*"
+                
+  data:
+    mongodb:
+      database: AdminDB
+      uri: mongodb+srv://sudhnitxyz:Sudh6203@cluster0.lwtca.mongodb.net/test
+  mail:
+    host: smtp.gmail.com
+    password: 6204220742
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          port: 25
+          starttls:
+            enable: true
+            required: true
+    protocol: smtp
+    username: sudhnitkaur10@gmail.com
+  main:
+    allow-bean-definition-overriding: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+      
